@@ -96,7 +96,7 @@ namespace GuessTheWord
             errorProvider1.Clear();
             if (String.IsNullOrEmpty(textBox1.Text) || String.IsNullOrWhiteSpace(textBox1.Text) || textBox1.Text.Length != 1)
             {
-                errorProvider1.SetError(textBox1, "Внесете само една буква!");
+                errorProvider1.SetError(textBox1, "Please enter only one letter!");
             } else
             {
                 if (char.IsLetter(textBox1.Text[0]))
