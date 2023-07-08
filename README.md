@@ -17,10 +17,10 @@
 Слика 3. Форма за регистрирање на играч
 
 Со кликнување на копчето „Start“ се отвара нов прозорец (слика 2) и започнува играта. Кога ќе се отвори новиот прозорец, се пушта звучен ефект на часовник. 
-Играчот има време од 1 минута за да го погоди скриениот збор. При стартување на играта, некои букви од зборот може да биде откриени, се со цел играчот побрзо да го погоди зборот.
+Играчот има време од 1 минута за да го погоди скриениот збор. При стартување на играта, некои букви од зборот може да бидат откриени, се со цел играчот побрзо да го погоди зборот.
 Играчот има право и 3 пати да побара помош (со hover на иконата со сијаличка, се покажува објаснување за зборот што треба да го погоди).
 Играчот во полето за внесување буква, мора да внесе само една буква, ако внесе повеќе букви или не внесе ништо, ќе му биде сигнализирано соодветно при кликнување на копчето „ENTER“.
-Доколку корисникот внесе погрешна буква или внесе буква која што е веќе погодена (како буквата „С“ на слика 2), тоа ќе биде избројано како грешка при погодување. Кога играчот ќе го погоди зборот, ќе се појави форма која ќе го праша дали сака да во пријави неговиот резултат. Доколку одгови со „Да“, ќе биде пренасочен на друга форма каде мора да го внесе своето корисничко име (слика 3).
+Доколку корисникот внесе погрешна буква или внесе буква која што е веќе погодена (како буквата „С“ на слика 2), тоа ќе биде избројано како грешка при погодување. Кога играчот ќе го погоди зборот, ќе се појави форма која ќе го праша дали сака да го пријави неговиот резултат. Доколку одгови со „Да“, ќе биде пренасочен на друга форма каде мора да го внесе своето корисничко име (слика 3).
 
 
 ![Leaderboard.png](Screenshots%2FLeaderboard.png)  
@@ -50,7 +50,7 @@ public class HiddenWord
     public string Word { get; set; }
     // HashSet kade se chuvaat bukvite koj igracot treba da gi pogodi
     public HashSet<char> AllLetters { get; set; }
-    // HashSet kade se chuvaat bukvite koj korisnikot vekje se otkrieni
+    // HashSet kade se chuvaat bukvite koj se vekje otkrieni
     public HashSet<char> GivenLetters { get; set; }
     
     public HiddenWord(string word)
@@ -82,8 +82,8 @@ public class HiddenWord
         }
     }
 
-    // funkcija so koja sto se dobiva skrieniot zbor koj igracot treba da go pogodi soodvetno za sekoja bukva od zborot 
-    // dodava dolna crta ili ja prikazuva bukvata vo zavisnost od toa vo koe mnozestvo e bukvata
+    // funkcija so koja sto se dobiva skrieniot zbor koj igracot treba da go pogodi, soodvetno za sekoja bukva od zborot 
+    // se dodava dolna crta ili ja prikazuva bukvata vo zavisnost od toa vo koe mnozestvo e bukvata
     public string GetHiddenWord()
     {
         Random random = new Random();
